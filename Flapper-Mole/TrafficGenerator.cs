@@ -1,5 +1,11 @@
 ﻿using System;
 
+/* <summary> 
+ * contains some basic veicle types and a traffic generator to create random traffic for testing
+ * contains TrafficMaker method to generate an array of vehicles with random license plates 
+   and assigns fast pass status from passed int amount
+ */
+
 namespace TrafficGenerator
 {
     public abstract class Vehicle
