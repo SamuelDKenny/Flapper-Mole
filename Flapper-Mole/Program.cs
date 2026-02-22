@@ -3,23 +3,26 @@ using TrafficGenerator;
 using TunnelToll;
 
 /*
- * vehicle class /
- * car class     /
- * truck class   /
- * bike class    /
- * bus class     /
- * method to generate vehicles /
- * toll booth class
- * 
+ Todo:
+ * toll booth method
+ * ^ calculate toll based on vehicle type and fast pass status
  */
 
-static void Main()
+class Program
+{
+    static void Main(string[] args)
     {
-        var list = new List<string> { "Hello", "World", "!" };
-        foreach (var item in list)
+        //test code to generate traffic and calculate tolls
+        TollBooth tollBooth = new TollBooth();
+        Vehicle[] vehicles = TrafficMaker.Traffic(10);
+        foreach (var vehicle in vehicles)
         {
-            Console.WriteLine(item);
+            string vehicleType = vehicle.GetType().Name;
+            tollBooth.CalculateToll(vehicleType);
         }
 
+        Console.ReadLine();
     }
+}
+    
 
